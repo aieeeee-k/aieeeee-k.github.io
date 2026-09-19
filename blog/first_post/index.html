@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-02-20">
-<meta name="description" content="description">
+<meta name="dcterms.date" content="2026-09-19">
+<meta name="description" content="This is experiment. This is my first post.">
 
-<title>.qmd and python jupyter blocks – Title Here</title>
+<title>First Post – Title Here</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -323,8 +323,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-are-qmd-files" id="toc-what-are-qmd-files" class="nav-link active" data-scroll-target="#what-are-qmd-files">What are qmd files?</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown">Markdown</a></li>
+  <li><a href="#markdown-code-snippets" id="toc-markdown-code-snippets" class="nav-link" data-scroll-target="#markdown-code-snippets">Markdown Code Snippets</a></li>
+  <li><a href="#markdown-basics" id="toc-markdown-basics" class="nav-link" data-scroll-target="#markdown-basics">Markdown Basics</a></li>
+  <li><a href="#more-markdwon-basics" id="toc-more-markdwon-basics" class="nav-link" data-scroll-target="#more-markdwon-basics">More Markdwon Basics</a></li>
+  <li><a href="#useful-html-in-markdown" id="toc-useful-html-in-markdown" class="nav-link" data-scroll-target="#useful-html-in-markdown">Useful HTML in Markdown</a></li>
+  <li><a href="#code-blocks" id="toc-code-blocks" class="nav-link" data-scroll-target="#code-blocks">Code Blocks</a></li>
   </ul>
 </nav>
     </div>
@@ -334,16 +338,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">.qmd and python jupyter blocks</h1>
+<h1 class="title">First Post</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">filter1</div>
-    <div class="quarto-category">filter2</div>
+    <div class="quarto-category">filter3</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    description
+    This is experiment. This is my first post.
   </div>
 </div>
 
@@ -354,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 20, 2024</p>
+      <p class="date">September 19, 2026</p>
     </div>
   </div>
   
@@ -366,89 +369,88 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="what-are-qmd-files" class="level1">
-<h1>What are qmd files?</h1>
-<p><code>.qmd</code> files are files special to quarto. The short version of it is that quarto renders these files, which are essentially markdown files, to jupyter notebooks, where it then executes and renders any python code.</p>
+<p>This is experiment</p>
+<section id="markdown" class="level2">
+<h2 class="anchored" data-anchor-id="markdown">Markdown</h2>
+<ul>
+<li>Markdown is <strong>markup language</strong></li>
+<li>Enables users to render formatted documents from <strong>plaintext</strong></li>
+<li>Most static site generators use markdown</li>
+</ul>
 </section>
-<section id="examples" class="level1">
-<h1>Examples</h1>
-<div id="8ab4d425" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello World!
-5</code></pre>
-</div>
-</div>
-<p>Quarto is designed for data science, and this means having executable code blocks that do something. For example, <a href="https://quarto.org/docs/computations/python.html">Quarto can use matplotlib in python to plot things</a>.</p>
-<p>Where things get interesting is the combination of three factors:</p>
-<ul>
-<li>The output of these code blocks can be done as plain text, rather than a code block, by putting <code>#| output: asis</code> at the beginning of the code block.</li>
-<li>The plain text output by these code blocks, is done <em>before</em> the markdown is rendered to other formats.</li>
-<li>It’s possible to hide the code blocks but not the output, by putting <code>#| echo: false</code> at the beginning of the code block itself</li>
-</ul>
-<p>What this means, is that python can essentially act as a formatting engine, for generating dynamic content. Even things like using.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: asis</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<section id="markdown-code-snippets" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-code-snippets">Markdown Code Snippets</h2>
+<p><br></p>
+<pre><code>`this is code snippets`</code></pre>
+<p><br></p>
+<p>They result in unformated, monospace text:</p>
+<p><br></p>
+<p><code>this is code snippets</code></p>
+</section>
+<section id="markdown-basics" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-basics">Markdown Basics</h2>
+<p><code>*italics*</code> = <em>italics</em></p>
+<p><code>**bold**</code> = <strong>bold</strong></p>
+<p><code>[linktext](example.com)</code> = <a href="example.com">linktext</a></p>
+</section>
+<section id="more-markdwon-basics" class="level2">
+<h2 class="anchored" data-anchor-id="more-markdwon-basics">More Markdwon Basics</h2>
+<p><br></p>
+<p><code># top level header</code></p>
+<h1>
+top level header
+</h1>
+<p><br></p>
+<p><code>## lower level header</code></p>
+<h2 class="anchored">
+lower level header
+</h2><h2 class="anchored">
+</h2></section>
+<section id="useful-html-in-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="useful-html-in-markdown">Useful HTML in Markdown</h2>
+<p><code>&lt;br&gt;</code> = line break</p>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>summary text<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>collapsable content</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<details>
+<summary>
+summary text
+</summary>
+collapsable content
+</details>
+</section>
+<section id="code-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="code-blocks">Code Blocks</h2>
+<p>It’s possible to do code blocks with langauge highlighting.</p>
+<p>This:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>\`\`\`{.python}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>print("hellow world!")</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_bullets(<span class="bu">list</span>):</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  bulletlist <span class="op">=</span> <span class="ss">f''''''</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">list</span>:</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    bulletlist <span class="op">=</span> bulletlist <span class="op">+</span> <span class="st">"* "</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    bulletlist <span class="op">=</span> bulletlist <span class="op">+</span> i</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    bulletlist <span class="op">=</span> bulletlist <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(bulletlist)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>sample_list <span class="op">=</span> [</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Item 1"</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Item 2"</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Item 3"</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>make_bullets(sample_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Which renders to:</p>
-<ul>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ul>
-<p>It should be noted that I am actually using two code blocks here, one which does not execute, and does not hide itself, and another which executes and hides itself.</p>
-<p>You can get even more dynamic content, if you use something like python requests to pull it as you render the site. Again, it is a bit hacky since backticks would render into a code block, so here I multiply one backticks times 3 to get a string containing 3 backticks, but it does work.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: asis</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>backticks <span class="op">=</span> <span class="st">"`"</span> <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'''</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>backticks<span class="sc">}</span><span class="ch">{{</span><span class="ss">.nix .code-overflow-wrap filename=home.nix</span><span class="ch">}}</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>requests<span class="sc">.</span>get(<span class="st">'https://raw.githubusercontent.com/ErikMcClure/bad-licenses/3c26bef3028fa8470308c493af7d7eae152a19ba/overwatch'</span>)<span class="sc">.</span>text<span class="sc">}</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>backticks<span class="sc">}</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">'''</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>home.nix</strong></pre>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>def testfunction(input):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    print("Hi!")</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>\`\`\`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Results in:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"hellow world!"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> testfunction(<span class="bu">input</span>):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hi!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Many, many languages are supported and can be highlighted.</p>
+<p>Images:</p>
+<p><code>![alt text](https://quarto.org/quarto.png)</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://quarto.org/quarto.png" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="home.nix"><pre class="sourceCode nix code-overflow-wrap code-with-copy"><code class="sourceCode nix"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>                     Overwatch License Revision <span class="dv">2</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                          <span class="op">(</span>c<span class="op">)</span> Author, year</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Permission is hereby granted, free of charge, for anyone to use, distribute, <span class="kw">or</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>sell the compiled binaries, source code, <span class="kw">and</span> documentation <span class="op">(</span>the <span class="st">"Software"</span><span class="op">)</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>without attribution<span class="op">.</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Permission to modify the Software is only granted to those that have a higher</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>competitive matchmaking rank than the copyright holder in Overwatch <span class="dv">2</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="op">(</span>Blizzard, <span class="dv">2022</span><span class="op">).</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>The Software is provided in the hope that some will find it useful, but the</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>Software comes under NO WARRANTY, EXPRESS OR IMPLIED, <span class="kw">and</span> the authors of the</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>Software are NOT LIABLE IN THE EVENT OF LOSSES, DAMAGES OR MISUSE relating to</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>the Software<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<p>Of course, this is an external image. You an also store images in the repository, and then refer to them by the relative file path. Something like:</p>
+<p><code>![](../image.png)</code></p>
+<p>Where <code>..</code> goes up one directory, and then you can refer to files by their file path.</p>
+<p>More information about markdown: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
 
 
 </section>
