@@ -5,3 +5,5 @@ _freeze/
 
 .vagrant/
 .vscode/
+
+**/*.quarto_ipynb
