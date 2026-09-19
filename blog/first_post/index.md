@@ -9,11 +9,10 @@ draft: false # Change to true to not render the post in on the website
 This is experiment
 
 
-## Markdown
+## Title
 
-* Markdown is **markup language**
-* Enables users to render formatted documents from **plaintext**
-* Most static site generators use markdown
+---
+Am I doing right?
 
 
 ## Markdown Code Snippets
